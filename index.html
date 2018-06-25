@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Sección 0073</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This example creates a simple polygon representing the Bermuda Triangle.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15.3,
+                center: { lat: 19.234620, lng: -103.749611 },
+                mapTypeId: 'roadmap'
+            });
+
+            // Define the LatLng coordinates for the polygon's path.
+            var triangleCoords = [
+                { lng: - 103.7562132, lat: 19.2418724 },
+                { lng: - 103.7576294, lat: 19.228744 },
+                { lng: - 103.7576294, lat: 19.2264748 },
+                { lng: - 103.7564278, lat: 19.2243677 },
+                { lng: - 103.7547541, lat: 19.2229899 },
+                { lng: - 103.7538528, lat: 19.2235572 },
+                { lng: - 103.7526083, lat: 19.2244893 },
+                { lng: - 103.7518787, lat: 19.2262317 },
+                { lng: - 103.7513208, lat: 19.2271232 },
+                { lng: - 103.750205, lat: 19.2273663 },
+                { lng: - 103.7500763, lat: 19.2280147 },
+                { lng: - 103.7504625, lat: 19.2292303 },
+                { lng: - 103.7496901, lat: 19.2310942 },
+                { lng: - 103.7489605, lat: 19.2310132 },
+                { lng: - 103.7487459, lat: 19.2294734 },
+                { lng: - 103.7466967, lat: 19.228116 },
+                { lng: - 103.7457418, lat: 19.2270421 },
+                { lng: - 103.744272, lat: 19.2261962 },
+                { lng: - 103.7434244, lat: 19.2255327 },
+                { lng: - 103.7418794, lat: 19.2289568 },
+                { lng: - 103.7422442, lat: 19.2295089 },
+                { lng: - 103.7416649, lat: 19.2311752 },
+                { lng: - 103.7415361, lat: 19.2318034 },
+                { lng: - 103.7412679, lat: 19.2327556 },
+                { lng: - 103.7427163, lat: 19.2331658 },
+                { lng: - 103.7422979, lat: 19.2340016 },
+                { lng: - 103.7462783, lat: 19.2350753 },
+                { lng: - 103.7461388, lat: 19.2352476 },
+                { lng: - 103.745538, lat: 19.2356629 },
+                { lng: - 103.7454307, lat: 19.2361491 },
+                { lng: - 103.7450123, lat: 19.2371114 },
+                { lng: - 103.7450981, lat: 19.2376787 },
+                { lng: - 103.7449479, lat: 19.2386106 },
+                { lng: - 103.7452054, lat: 19.2391171 },
+                { lng: - 103.7450337, lat: 19.239502 },
+                { lng: - 103.7442613, lat: 19.2401909 },
+                { lng: - 103.7488961, lat: 19.2403326 },
+                { lng: - 103.7487352, lat: 19.2422066 },
+                { lng: - 103.7562132, lat: 19.2418724}
+
+        ];
+
+        // Construct the polygon.
+        var bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.2,
+          strokeWeight: 2,
+          fillColor: '#0000FA',
+          fillOpacity: 0.1
+        });
+        bermudaTriangle.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUPV-xK0Wz7Xj6A7NqERCRKng9EqDLl8E&callback=initMap">
+    </script>
+  </body>
+</html>
